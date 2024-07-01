@@ -7,7 +7,7 @@ const addCurrency = async (req, res, next) => {
     const { currencyname, exchangerate } = req.body
     console.log(currencyname, exchangerate)
 
-    if (!currencyname, !exchangerate) {
+    if (!currencyname || !exchangerate) {
         return next(errorHandler(400, "All fields are required!"))
     }
 
