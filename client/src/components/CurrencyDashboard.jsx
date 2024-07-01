@@ -26,7 +26,11 @@ const CurrencyDashboard = () => {
         return (
             <tr key={currency._id}>
                 <td className='text-center py-5 px-3 text-slate-900'>{currency.currencyname}</td>
-                <td className='text-center py-5 px-3 text-slate-900'>{moment(currency.createdAt).format('l')} - {moment(currency.createdAt).format('LT')}</td>
+                <td className='text-center py-5 px-3 text-slate-900'>
+                    {
+                        moment(currency.updatedAt).format('l')} - {moment(currency.updatedAt).format('LT')
+                    }
+                </td>
                 <td className='text-center py-5 px-3 text-slate-900'>{currency.exchangerate}</td>
             </tr>
         )
